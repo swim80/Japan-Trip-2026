@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Trip — August 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&family=Shippori+Mincho:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #C0392B;
+    --red-dark: #96281B;
+    --ink: #1A1A2E;
+    --cream: #FAF6F0;
+    --gold: #D4A843;
+    --teal: #2C7873;
+    --sakura: #F8BBD9;
+    --mist: #E8EEF4;
+    --tokyo: #2C3E7A;
+    --kyoto: #5B4A6F;
+    --osaka: #8B2500;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,46,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(192,57,43,0.3);
+    padding: 0 2rem;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px; font-weight: 800;
+    color: var(--cream);
+    letter-spacing: 0.05em;
+  }
+  .nav-logo span { color: var(--red); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    color: rgba(250,246,240,0.7);
+    text-decoration: none;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: var(--ink);
+    display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    padding-top: 56px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(ellipse 60% 60% at 80% 20%, rgba(192,57,43,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(44,120,115,0.12) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 80% at 50% 50%, rgba(212,168,67,0.04) 0%, transparent 70%);
+  }
+  .hero-circles {
+    position: absolute; inset: 0; pointer-events: none;
+  }
+  .hero-circle {
+    position: absolute; border-radius: 50%;
+    border: 1px solid rgba(192,57,43,0.15);
+  }
+  .hero-circle:nth-child(1) { width: 600px; height: 600px; top: -100px; right: -150px; }
+  .hero-circle:nth-child(2) { width: 400px; height: 400px; top: 50px; right: -50px; border-color: rgba(212,168,67,0.12); }
+  .hero-circle:nth-child(3) { width: 200px; height: 200px; top: 200px; right: 150px; border-color: rgba(192,57,43,0.2); }
+
+  .hero-kanji {
+    position: absolute; right: 8%; top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Shippori Mincho', serif;
+    font-size: 160px; font-weight: 800;
+    color: rgba(192,57,43,0.08);
+    writing-mode: vertical-rl;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    user-select: none;
+  }
+  .hero-content {
+    position: relative; z-index: 2;
+    text-align: center; padding: 2rem;
+    max-width: 700px;
+  }
+  .hero-eyebrow {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 40px; height: 1px; background: var(--gold); opacity: 0.5;
+  }
+  .hero-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(52px, 8vw, 96px);
+    font-weight: 800;
+    color: var(--cream);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .hero-title span { color: var(--red); }
+  .hero-subtitle {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(14px, 2vw, 20px);
+    color: rgba(250,246,240,0.5);
+    letter-spacing: 0.15em;
+    margin-bottom: 2.5rem;
+  }
+  .hero-meta {
+    display: flex; gap: 2rem; justify-content: center;
+    flex-wrap: wrap;
+  }
+  .hero-badge {
+    background: rgba(250,246,240,0.06);
+    border: 1px solid rgba(250,246,240,0.12);
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 12px; color: rgba(250,246,240,0.7);
+    letter-spacing: 0.05em;
+  }
+  .hero-badge strong { color: var(--cream); display: block; font-size: 14px; margin-bottom: 2px; }
+  .hero-nav-pills {
+    display: flex; gap: 1rem; justify-content: center;
+    margin-top: 3rem; flex-wrap: wrap;
+  }
+  .pill-btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 13px; font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer; text-decoration: none;
+    transition: all 0.2s;
+  }
+  .pill-btn-primary {
+    background: var(--red);
+    color: var(--cream);
+    border: 1px solid var(--red);
+  }
+  .pill-btn-primary:hover { background: var(--red-dark); }
+  .pill-btn-secondary {
+    background: transparent;
+    color: rgba(250,246,240,0.8);
+    border: 1px solid rgba(250,246,240,0.2);
+  }
+  .pill-btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* FLIGHT STRIP */
+  .flight-strip {
+    background: var(--ink);
+    border-top: 1px solid rgba(192,57,43,0.2);
+    padding: 1.25rem 2rem;
+    display: flex; align-items: center; justify-content: center;
+    gap: 3rem; flex-wrap: wrap;
+  }
+  .flight-leg {
+    display: flex; align-items: center; gap: 1rem;
+    font-size: 13px; color: rgba(250,246,240,0.6);
+  }
+  .flight-leg strong { color: var(--cream); }
+  .flight-arrow { color: var(--red); font-size: 18px; }
+  .flight-divider { width: 1px; height: 30px; background: rgba(250,246,240,0.1); }
+
+  /* SECTION COMMON */
+  section { padding: 80px 2rem; }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-label {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--gold); opacity: 0.2; max-width: 80px; }
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .section-desc {
+    font-size: 15px; color: rgba(26,26,46,0.6);
+    line-height: 1.7; max-width: 540px;
+    margin-bottom: 3rem;
+  }
+
+  /* PAGE TABS */
+  .page-tabs {
+    display: flex; gap: 0;
+    border-bottom: 2px solid rgba(26,26,46,0.08);
+    margin-bottom: 3rem;
+  }
+  .page-tab {
+    padding: 12px 24px;
+    font-size: 14px; font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    color: rgba(26,26,46,0.5);
+    transition: all 0.2s;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .page-tab.active {
+    color: var(--red);
+    border-bottom-color: var(--red);
+  }
+  .page-tab:hover { color: var(--ink); }
+
+  /* PAGE SECTIONS */
+  .page-section { display: none; }
+  .page-section.active { display: block; }
+
+  /* ATTRACTIONS GRID */
+  .attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+  .attraction-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(26,26,46,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .attraction-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(26,26,46,0.1);
+  }
+  .attraction-img {
+    width: 100%; height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .attraction-img-placeholder {
+    width: 100%; height: 200px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px;
+  }
+  .attraction-body { padding: 1.25rem; }
+  .attraction-tags {
+    display: flex; gap: 6px; flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+  }
+  .tag {
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 3px 8px; border-radius: 3px;
+  }
+  .tag-tokyo { background: rgba(44,62,122,0.08); color: var(--tokyo); }
+  .tag-kyoto { background: rgba(91,74,111,0.08); color: var(--kyoto); }
+  .tag-osaka { background: rgba(139,37,0,0.08); color: var(--osaka); }
+  .tag-free { background: rgba(44,120,115,0.08); color: var(--teal); }
+  .tag-prebooking { background: rgba(212,168,67,0.1); color: #96750a; }
+  .attraction-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px; font-weight: 800;
+    margin-bottom: 0.5rem; line-height: 1.2;
+  }
+  .attraction-desc {
+    font-size: 13px; color: rgba(26,26,46,0.65);
+    line-height: 1.6; margin-bottom: 1rem;
+  }
+  .attraction-meta {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 8px; margin-bottom: 1rem;
+    padding: 0.75rem;
+    background: rgba(26,26,46,0.02);
+    border-radius: 6px;
+    border: 1px solid rgba(26,26,46,0.05);
+  }
+  .meta-item { display: flex; flex-direction: column; gap: 2px; }
+  .meta-label { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(26,26,46,0.4); }
+  .meta-value { font-size: 12px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+  .attraction-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 500;
+    color: var(--red); text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: gap 0.2s;
+  }
+  .attraction-link:hover { gap: 10px; }
+  .prebooking-note {
+    margin-top: 8px;
+    padding: 6px 10px;
+    background: rgba(212,168,67,0.08);
+    border: 1px solid rgba(212,168,67,0.2);
+    border-radius: 4px;
+    font-size: 11px; color: #7a5f08;
+    line-height: 1.4;
+  }
+
+  /* CITY FILTER */
+  .city-filter {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .filter-btn {
+    padding: 8px 16px;
+    border: 1px solid rgba(26,26,46,0.12);
+    border-radius: 4px;
+    font-size: 12px; font-weight: 500;
+    cursor: pointer; background: white;
+    color: rgba(26,26,46,0.6);
+    transition: all 0.15s;
+    letter-spacing: 0.03em;
+  }
+  .filter-btn:hover { border-color: var(--red); color: var(--red); }
+  .filter-btn.active { background: var(--red); color: white; border-color: var(--red); }
+
+  /* ITINERARY */
+  .city-block { margin-bottom: 4rem; }
+  .city-heading {
+    display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid;
+  }
+  .city-heading.tokyo { border-color: var(--tokyo); }
+  .city-heading.kyoto { border-color: var(--kyoto); }
+  .city-heading.osaka { border-color: var(--osaka); }
+  .city-dot {
+    width: 12px; height: 12px; border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .tokyo .city-dot { background: var(--tokyo); }
+  .kyoto .city-dot { background: var(--kyoto); }
+  .osaka .city-dot { background: var(--osaka); }
+  .city-heading-text {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 26px; font-weight: 800;
+  }
+  .tokyo .city-heading-text { color: var(--tokyo); }
+  .kyoto .city-heading-text { color: var(--kyoto); }
+  .osaka .city-heading-text { color: var(--osaka); }
+  .city-dates {
+    font-size: 13px; color: rgba(26,26,46,0.5);
+    margin-left: auto;
+  }
+
+  /* DAY CARDS */
+  .day-row {
+    display: grid; grid-template-columns: 80px 1fr;
+    gap: 0 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .day-num-col {
+    display: flex; flex-direction: column;
+    align-items: center; padding-top: 1rem;
+  }
+  .day-circle {
+    width: 48px; height: 48px; border-radius: 50%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.05em; text-transform: uppercase;
+    border: 1.5px solid;
+    flex-shrink: 0;
+  }
+  .day-circle strong { font-size: 18px; font-weight: 800; letter-spacing: 0; line-height: 1; }
+  .tokyo .day-circle { border-color: var(--tokyo); color: var(--tokyo); }
+  .kyoto .day-circle { border-color: var(--kyoto); color: var(--kyoto); }
+  .osaka .day-circle { border-color: var(--osaka); color: var(--osaka); }
+  .day-line {
+    flex: 1; width: 1px; margin-top: 8px;
+    background: rgba(26,26,46,0.08);
+  }
+  .day-card-outer {
+    background: white;
+    border-radius: 8px;
+    border: 1px solid rgba(26,26,46,0.06);
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  .day-card-header {
+    padding: 1rem 1.25rem;
+    display: flex; align-items: center; gap: 12px;
+    border-bottom: 1px solid rgba(26,26,46,0.06);
+  }
+  .day-date-text {
+    font-size: 14px; font-weight: 500;
+  }
+  .day-theme {
+    font-size: 12px; color: rgba(26,26,46,0.5);
+    margin-left: auto;
+    font-style: italic;
+  }
+  .day-slots {
+    display: grid; grid-template-columns: 1fr 1fr;
+  }
+  .day-slot {
+    padding: 1rem 1.25rem;
+    border-right: 1px solid rgba(26,26,46,0.05);
+  }
+  .day-slot:last-child { border-right: none; }
+  .slot-time {
+    font-size: 10px; font-weight: 500;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: rgba(26,26,46,0.35); margin-bottom: 6px;
+  }
+  .slot-heading {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 15px; font-weight: 700;
+    margin-bottom: 4px; line-height: 1.2;
+  }
+  .slot-detail {
+    font-size: 12px; color: rgba(26,26,46,0.6);
+    line-height: 1.5;
+  }
+  .slot-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; color: var(--red);
+    text-decoration: none; margin-top: 6px;
+    font-weight: 500;
+  }
+  .slot-link:hover { text-decoration: underline; }
+  .food-footer {
+    padding: 8px 1.25rem;
+    background: rgba(26,26,46,0.02);
+    border-top: 1px solid rgba(26,26,46,0.05);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .food-icon { font-size: 14px; }
+  .food-text { font-size: 11px; color: rgba(26,26,46,0.6); }
+  .food-text strong { color: rgba(26,26,46,0.8); }
+
+  /* TIPS */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .tip-card {
+    background: white;
+    border: 1px solid rgba(26,26,46,0.06);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .tip-emoji { font-size: 24px; margin-bottom: 0.75rem; display: block; }
+  .tip-title { font-weight: 600; font-size: 14px; margin-bottom: 0.5rem; }
+  .tip-text { font-size: 13px; color: rgba(26,26,46,0.65); line-height: 1.6; }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink);
+    color: rgba(250,246,240,0.4);
+    text-align: center;
+    padding: 2rem;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  footer span { color: var(--red); }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .day-slots { grid-template-columns: 1fr; }
+    .day-slot { border-right: none; border-bottom: 1px solid rgba(26,26,46,0.05); }
+    .day-row { grid-template-columns: 56px 1fr; gap: 0 1rem; }
+    .nav-links { display: none; }
+    .hero-kanji { display: none; }
+    .flight-strip { gap: 1rem; }
+    .flight-divider { display: none; }
+    .attractions-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-content > * {
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+  .hero-content > *:nth-child(6) { animation-delay: 0.6s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">日本 <span>JAPAN</span> 2026</div>
+  <div class="nav-links">
+    <a href="#plan" class="active">Plan</a>
+    <a href="#attractions">Attractions</a>
+    <a href="#tips">Tips</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circles">
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+    <div class="hero-circle"></div>
+  </div>
+  <div class="hero-kanji">日本旅行</div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Family Adventure</div>
+    <h1 class="hero-title">Japan<br><span>2026</span></h1>
+    <p class="hero-subtitle">東京 · 京都 · 大阪</p>
+    <div class="hero-meta">
+      <div class="hero-badge"><strong>10 Days</strong>In Japan</div>
+      <div class="hero-badge"><strong>3 Cities</strong>Tokyo · Kyoto · Osaka</div>
+      <div class="hero-badge"><strong>3 People</strong>Family of Three</div>
+      <div class="hero-badge"><strong>Etihad</strong>via Abu Dhabi</div>
+    </div>
+    <div class="hero-nav-pills">
+      <a href="#plan" class="pill-btn pill-btn-primary">View Itinerary →</a>
+      <a href="#plan" class="pill-btn pill-btn-secondary" onclick="setTimeout(()=>{document.querySelectorAll('.page-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));document.querySelectorAll('.page-tab')[1].classList.add('active');document.getElementById('attractions').classList.add('active');},300)">Explore Attractions</a>
+    </div>
+  </div>
+</div>
+
+<!-- FLIGHT STRIP -->
+<div class="flight-strip">
+  <div class="flight-leg">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,240,0.4);margin-bottom:2px">Outbound</div>
+      <strong>Tue 18 Aug</strong> · ATH 14:25
+    </div>
+    <span class="flight-arrow">→</span>
+    <div>
+      <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,240,0.4);margin-bottom:2px">Arrive</div>
+      <strong>Wed 19 Aug</strong> · NRT 12:45
+    </div>
+  </div>
+  <div class="flight-divider"></div>
+  <div class="flight-leg" style="font-size:12px;color:rgba(250,246,240,0.4)">
+    Etihad Airways · 1 stop Abu Dhabi (AUH) · 16h 20m
+  </div>
+  <div class="flight-divider"></div>
+  <div class="flight-leg">
+    <div>
+      <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,240,0.4);margin-bottom:2px">Return</div>
+      <strong>Fri 28 Aug</strong> · KIX 18:40
+    </div>
+    <span class="flight-arrow">→</span>
+    <div>
+      <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(250,246,240,0.4);margin-bottom:2px">Arrive</div>
+      <strong>Sat 29 Aug</strong> · ATH 06:15
+    </div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<section id="plan">
+  <div class="section-inner">
+    <div class="section-label">The Plan</div>
+    <h2 class="section-title">10 Days in Japan</h2>
+    <p class="section-desc">A carefully crafted itinerary balancing culture, theme parks, food, and Japanese aesthetics — built for a family that wants to experience it all.</p>
+
+    <div class="page-tabs">
+      <a href="#" class="page-tab active" onclick="switchTab(event,'itinerary')">Interactive Itinerary</a>
+      <a href="#attractions" class="page-tab" onclick="switchTab(event,'attractions')">All Attractions</a>
+    </div>
+
+    <!-- ITINERARY TAB -->
+    <div id="itinerary" class="page-section active">
+
+      <!-- TOKYO -->
+      <div class="city-block">
+        <div class="city-heading tokyo">
+          <div class="city-dot"></div>
+          <div>
+            <div class="city-heading-text">Tokyo 東京</div>
+          </div>
+          <div class="city-dates">Wed 19 – Sun 23 Aug · 5 nights</div>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle tokyo"><span>Day</span><strong>1</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Wed 19 Aug — Arrival</div>
+              <div class="day-theme">First steps in Tokyo</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Afternoon</div>
+                <div class="slot-heading">Check in & settle</div>
+                <div class="slot-detail">Arrive NRT 12:45. Narita Express to Shinjuku (~80 min, ¥3,100). Hotel, freshen up, light walk around the neighbourhood.</div>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Evening</div>
+                <div class="slot-heading">Shinjuku by night</div>
+                <div class="slot-detail">Kabukicho neon walk. Omoide Yokocho (Memory Lane) — tiny yakitori stalls packed together, ice-cold beer, pure Tokyo atmosphere.</div>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍢</span>
+              <span class="food-text"><strong>Tonight:</strong> Yakitori skewers + Sapporo draft at Omoide Yokocho, Shinjuku</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle tokyo"><span>Day</span><strong>2</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Thu 20 Aug — Culture & Anime</div>
+              <div class="day-theme">Temples & tech</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning</div>
+                <div class="slot-heading">Senso-ji Temple · Asakusa</div>
+                <div class="slot-detail">Tokyo's oldest temple. Go early (07:30) to beat crowds. Walk Nakamise shopping street for souvenirs, lucky charms and street snacks.</div>
+                <a href="https://www.senso-ji.jp/english/" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon</div>
+                <div class="slot-heading">Akihabara</div>
+                <div class="slot-detail">Electronics, anime, manga and retro game arcades. Yodobashi Camera, Super Potato for retro games. Heaven for the teens.</div>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍜</span>
+              <span class="food-text"><strong>Viral food:</strong> Melonpan ice cream at Asakusa · Ichiran ramen solo booths for dinner (¥1,200)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle tokyo"><span>Day</span><strong>3</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Fri 21 Aug — DisneySea</div>
+              <div class="day-theme">Full day · pre-booking required</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Full day from 09:00</div>
+                <div class="slot-heading">Tokyo DisneySea</div>
+                <div class="slot-detail">The world's only DisneySea — more immersive and spectacular than any other Disney park. Open 09:00–21:00 in August. JR Keiyo Line to Maihama Station.</div>
+                <a href="https://www.tokyodisneyresort.jp/en/tds.html" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Strategy</div>
+                <div class="slot-heading">Must-do rides</div>
+                <div class="slot-detail">Indiana Jones, Soaring, Journey to the Center of the Earth, 20,000 Leagues. Use Disney Premier Access app on the day. Tickets: ¥9,400 adult / ¥7,800 teen (12–17).</div>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍦</span>
+              <span class="food-text"><strong>Inside the park:</strong> Mickey churros · Gyoza dog · Gyukatsu bento at S.S. Columbia</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle tokyo"><span>Day</span><strong>4</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Sat 22 Aug — Art & Pop Culture</div>
+              <div class="day-theme">Shrines to digital dreams</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning</div>
+                <div class="slot-heading">Harajuku & Meiji Shrine</div>
+                <div class="slot-detail">Start at Meiji Shrine (serene, forested, free). Then Takeshita Street for wild J-fashion, crepes and teen-friendly chaos.</div>
+                <a href="https://www.meijijingu.or.jp/en/" target="_blank" class="slot-link">Meiji Shrine ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon · pre-book</div>
+                <div class="slot-heading">TeamLab Borderless</div>
+                <div class="slot-detail">Immersive digital art museum, Azabudai Hills. Open 10:00–21:00 daily. Timed entry — book weeks ahead. Adults ¥3,800–4,800 · Teens (13–17) ¥2,800.</div>
+                <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="slot-link">Book tickets ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍣</span>
+              <span class="food-text"><strong>Viral food:</strong> Harajuku rainbow crepe · Uobei Shibuya conveyor belt sushi for dinner (¥600–1,000)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle tokyo"><span>Day</span><strong>5</strong></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Sun 23 Aug — Museum & Stationery</div>
+              <div class="day-theme">Art, history & shopping</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning from 09:30</div>
+                <div class="slot-heading">Tokyo National Museum</div>
+                <div class="slot-detail">World's largest Japanese art collection. Open Sun 09:30–17:00 (closed Mondays — Sunday is fine!). Adults ¥1,000 · Under 18 FREE. Ueno Park.</div>
+                <a href="https://www.tnm.jp/?lang=en" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon</div>
+                <div class="slot-heading">Ginza & Itoya Stationery</div>
+                <div class="slot-detail">Itoya: 12 floors of world-class stationery — the ultimate stop for stationery lovers. Walk Ginza's boulevard. Shibuya Crossing at dusk — unmissable.</div>
+                <a href="https://www.ito-ya.co.jp/en/" target="_blank" class="slot-link">Itoya ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🦪</span>
+              <span class="food-text"><strong>Viral food:</strong> Tsukiji outer market oysters + tamagoyaki in the morning</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- end Tokyo -->
+
+      <!-- KYOTO -->
+      <div class="city-block">
+        <div class="city-heading kyoto">
+          <div class="city-dot"></div>
+          <div><div class="city-heading-text">Kyoto 京都</div></div>
+          <div class="city-dates">Mon 24 – Wed 26 Aug · 3 nights · Shinkansen ~2h30</div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle kyoto"><span>Day</span><strong>6</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Mon 24 Aug — Kyoto Arrival</div>
+              <div class="day-theme">Thousand torii gates</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning</div>
+                <div class="slot-heading">Shinkansen to Kyoto</div>
+                <div class="slot-detail">Take early Hikari from Tokyo (~09:00). Arrive Kyoto ~11:30. Check in, drop bags. JR Pass or individual ticket: ¥14,720/person on Hikari.</div>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon · FREE entry</div>
+                <div class="slot-heading">Fushimi Inari Taisha</div>
+                <div class="slot-detail">Open 24/7, free entry. Thousands of vermilion torii gates winding up the mountain. Go in afternoon — stunning golden light on the gates. Full summit ~2h.</div>
+                <a href="https://inari.jp/en/" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍡</span>
+              <span class="food-text"><strong>Viral food:</strong> Nishiki Market walk — dashimaki tamago, yuba tofu, grilled mochi skewers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle kyoto"><span>Day</span><strong>7</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Tue 25 Aug — Classic Kyoto</div>
+              <div class="day-theme">Bamboo, gold & geisha</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning · FREE entry</div>
+                <div class="slot-heading">Arashiyama Bamboo Grove</div>
+                <div class="slot-detail">Go at 07:00 before crowds arrive. The bamboo grove is free. Tenryu-ji Zen garden: ¥500. Togetsukyo bridge walk along the Oi River.</div>
+                <a href="https://www.arashiyama-tenryuji.com/en/" target="_blank" class="slot-link">Tenryu-ji ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon</div>
+                <div class="slot-heading">Gion & Kinkaku-ji</div>
+                <div class="slot-detail">Walk Gion's preserved geisha streets (Hanami-koji). Kinkaku-ji Golden Pavilion at ~15:00: ¥500. Optional tea ceremony experience nearby.</div>
+                <a href="https://www.shokoku-ji.jp/en/kinkakuji/" target="_blank" class="slot-link">Kinkaku-ji ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🍵</span>
+              <span class="food-text"><strong>Viral food:</strong> Matcha soft serve at Nakamura Tokichi · kaiseki dinner in Gion for a special evening</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 8 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle kyoto"><span>Day</span><strong>8</strong></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Wed 26 Aug — Manga & Stationery</div>
+              <div class="day-theme">Culture for the teens</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning 10:00–16:30</div>
+                <div class="slot-heading">Kyoto Manga Museum</div>
+                <div class="slot-detail">300,000-volume manga library in a converted school. Open Wed–Mon 10:00–17:00 (closed Tuesdays — Wednesday is fine!). Adults ¥900 · Students ¥400.</div>
+                <a href="https://kyotomm.jp/en/" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon</div>
+                <div class="slot-heading">Teramachi & Kyukyo-do</div>
+                <div class="slot-detail">Best stationery shopping in Kyoto. Kyukyo-do (est. 1663): washi paper, ink brushes, Japanese stationery. Tea ceremony experiences available nearby.</div>
+                <a href="https://www.kyukyodo.co.jp/english/" target="_blank" class="slot-link">Kyukyo-do ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🫕</span>
+              <span class="food-text"><strong>Viral food:</strong> Yudofu (Kyoto hot tofu) — the city's signature humble dish · tofu kaiseki lunch</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- end Kyoto -->
+
+      <!-- OSAKA -->
+      <div class="city-block">
+        <div class="city-heading osaka">
+          <div class="city-dot"></div>
+          <div><div class="city-heading-text">Osaka 大阪</div></div>
+          <div class="city-dates">Thu 27 – Fri 28 Aug · 2 nights · JR from Kyoto ~15 min</div>
+        </div>
+
+        <!-- Day 9 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle osaka"><span>Day</span><strong>9</strong></div>
+            <div class="day-line"></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Thu 27 Aug — Universal Studios</div>
+              <div class="day-theme">Full day · pre-booking required</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning</div>
+                <div class="slot-heading">Move to Osaka + USJ</div>
+                <div class="slot-detail">Early JR train Kyoto → Osaka (15 min, ¥560). Drop bags at hotel. JR Yumesaki Line to Universal City Station (10 min, ¥180). Head straight to the park.</div>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Full day · opens 09:00</div>
+                <div class="slot-heading">Universal Studios Japan</div>
+                <div class="slot-detail">Super Nintendo World (pre-book Area Entry separately in app), Harry Potter's Wizarding World, Donkey Kong Country. Adults from ¥8,600. Express Pass recommended.</div>
+                <a href="https://www.usj.co.jp/web/en/us" target="_blank" class="slot-link">Official site ↗</a>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🎮</span>
+              <span class="food-text"><strong>Inside the park:</strong> Butterbeer in Harry Potter World · Mario-themed food in Nintendo World</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Day 10 -->
+        <div class="day-row">
+          <div class="day-num-col">
+            <div class="day-circle osaka"><span>Day</span><strong>10</strong></div>
+          </div>
+          <div class="day-card-outer">
+            <div class="day-card-header">
+              <div class="day-date-text">Fri 28 Aug — Osaka & Fly Home</div>
+              <div class="day-theme">Street food & sayonara</div>
+            </div>
+            <div class="day-slots">
+              <div class="day-slot">
+                <div class="slot-time">Morning</div>
+                <div class="slot-heading">Dotonbori & Kuromon Market</div>
+                <div class="slot-detail">Iconic neon canal walk. Kuromon Ichiba Market (the "Osaka Kitchen") — fresh crab, wagyu skewers, fugu. Osaka Castle and grounds (free outside): ¥600 for castle interior.</div>
+                <a href="https://www.osakacastle.net/english/" target="_blank" class="slot-link">Osaka Castle ↗</a>
+              </div>
+              <div class="day-slot">
+                <div class="slot-time">Afternoon → KIX 18:40</div>
+                <div class="slot-heading">Den Den Town & Depart</div>
+                <div class="slot-detail">Osaka's anime/electronics district for last souvenir shopping. Head to Kansai Airport (KIX) by 16:30 — 2h before departure. Nankai Railway: ~40 min, ¥1,450.</div>
+              </div>
+            </div>
+            <div class="food-footer">
+              <span class="food-icon">🐙</span>
+              <span class="food-text"><strong>Viral food:</strong> Takoyaki at Wanaka · fresh oysters at Kuromon · okonomiyaki for lunch</span>
+            </div>
+          </div>
+        </div>
+      </div><!-- end Osaka -->
+    </div><!-- end itinerary tab -->
+
+    <!-- ATTRACTIONS TAB -->
+    <div id="attractions" class="page-section">
+      <div class="city-filter">
+        <button class="filter-btn active" onclick="filterAttractions('all',this)">All</button>
+        <button class="filter-btn" onclick="filterAttractions('tokyo',this)">Tokyo</button>
+        <button class="filter-btn" onclick="filterAttractions('kyoto',this)">Kyoto</button>
+        <button class="filter-btn" onclick="filterAttractions('osaka',this)">Osaka</button>
+      </div>
+      <div class="attractions-grid" id="attractionsGrid">
+
+        <!-- SENSO-JI -->
+        <div class="attraction-card" data-city="tokyo">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Asakusa_Senso-ji_Hozomon.jpg/640px-Asakusa_Senso-ji_Hozomon.jpg" alt="Senso-ji Temple" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#E8EEF4">⛩️</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-tokyo">Tokyo</span>
+              <span class="tag tag-free">Free Entry</span>
+            </div>
+            <div class="attraction-name">Senso-ji Temple</div>
+            <div class="attraction-desc">Tokyo's oldest and most iconic temple in the heart of Asakusa, with the famous Nakamise shopping street leading to its grand gate.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">24/7 (main hall 06:00–17:00)</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">Free</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 2 · Thu 20 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Area</span><span class="meta-value">Asakusa, Tokyo</span></div>
+            </div>
+            <a href="https://www.senso-ji.jp/english/" target="_blank" class="attraction-link">Visit official site ↗</a>
+          </div>
+        </div>
+
+        <!-- DISNEYSEA -->
+        <div class="attraction-card" data-city="tokyo">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Tokyo_DisneySea_Mediterranean_Harbor.jpg/640px-Tokyo_DisneySea_Mediterranean_Harbor.jpg" alt="Tokyo DisneySea" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#f0e8f8">🎡</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-tokyo">Tokyo</span>
+              <span class="tag tag-prebooking">Pre-booking Required</span>
+            </div>
+            <div class="attraction-name">Tokyo DisneySea</div>
+            <div class="attraction-desc">The world's only DisneySea — an unparalleled theme park inspired by the myths and legends of the sea. More immersive and teen-friendly than Disneyland.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">09:00–21:00 (Aug)</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">¥9,400 adult · ¥7,800 teen</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 3 · Fri 21 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Access</span><span class="meta-value">JR Keiyo Line → Maihama</span></div>
+            </div>
+            <a href="https://www.tokyodisneyresort.jp/en/tds.html" target="_blank" class="attraction-link">Book tickets ↗</a>
+            <div class="prebooking-note">⚠️ Book tickets weeks in advance — August is peak season and dates sell out fast.</div>
+          </div>
+        </div>
+
+        <!-- TEAMLAB -->
+        <div class="attraction-card" data-city="tokyo">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/TeamLab_Borderless_-_Flowers_and_People%2C_Cannot_be_Controlled_but_Live_Together.jpg/640px-TeamLab_Borderless_-_Flowers_and_People%2C_Cannot_be_Controlled_but_Live_Together.jpg" alt="TeamLab Borderless" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#e8f0f8">🌸</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-tokyo">Tokyo</span>
+              <span class="tag tag-prebooking">Pre-booking Required</span>
+            </div>
+            <div class="attraction-name">TeamLab Borderless</div>
+            <div class="attraction-desc">Immersive digital art museum at Azabudai Hills — a "museum without a map" with 75+ artworks that flow between rooms and respond to your presence.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">10:00–21:00 daily</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">¥3,800–4,800 adult · ¥2,800 teen</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 4 · Sat 22 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Access</span><span class="meta-value">Kamiyacho Station Exit 5</span></div>
+            </div>
+            <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="attraction-link">Book timed entry ↗</a>
+            <div class="prebooking-note">⚠️ Timed entry tickets sell out — book weeks ahead on the official TeamLab website first.</div>
+          </div>
+        </div>
+
+        <!-- TOKYO NATIONAL MUSEUM -->
+        <div class="attraction-card" data-city="tokyo">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Honkan%2C_Tokyo_National_Museum.jpg/640px-Honkan%2C_Tokyo_National_Museum.jpg" alt="Tokyo National Museum" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#f5f0e8">🏛️</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-tokyo">Tokyo</span>
+            </div>
+            <div class="attraction-name">Tokyo National Museum</div>
+            <div class="attraction-desc">World's largest collection of Japanese art — samurai swords, kimonos, ceramics, Buddhist sculptures, and National Treasures across 5 buildings in Ueno Park.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">Tue–Sun 09:30–17:00 (Fri/Sat –19:00)</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">¥1,000 adult · Free under 18</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 5 · Sun 23 Aug ✓ Open</span></div>
+              <div class="meta-item"><span class="meta-label">Closed</span><span class="meta-value">Mondays only</span></div>
+            </div>
+            <a href="https://www.tnm.jp/?lang=en" target="_blank" class="attraction-link">Official site ↗</a>
+          </div>
+        </div>
+
+        <!-- FUSHIMI INARI -->
+        <div class="attraction-card" data-city="kyoto">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Fushimi_Inari_Taisha_Senbon_torii_1.jpg/640px-Fushimi_Inari_Taisha_Senbon_torii_1.jpg" alt="Fushimi Inari" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#fceee8">⛩️</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-kyoto">Kyoto</span>
+              <span class="tag tag-free">Free Entry</span>
+            </div>
+            <div class="attraction-name">Fushimi Inari Taisha</div>
+            <div class="attraction-desc">Thousands of vermilion torii gates winding up the sacred Mount Inari. One of Japan's most iconic sights — best experienced at dawn or late afternoon.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">Open 24 hours, 365 days</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">Free</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 6 · Mon 24 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Access</span><span class="meta-value">JR Inari Station (2 min walk)</span></div>
+            </div>
+            <a href="https://inari.jp/en/" target="_blank" class="attraction-link">Official site ↗</a>
+          </div>
+        </div>
+
+        <!-- ARASHIYAMA -->
+        <div class="attraction-card" data-city="kyoto">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Arashiyama_Bamboo_Grove_%28Unsplash%29.jpg/640px-Arashiyama_Bamboo_Grove_%28Unsplash%29.jpg" alt="Arashiyama Bamboo Grove" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#e8f5e8">🎋</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-kyoto">Kyoto</span>
+              <span class="tag tag-free">Bamboo Grove Free</span>
+            </div>
+            <div class="attraction-name">Arashiyama Bamboo Grove</div>
+            <div class="attraction-desc">A towering corridor of bamboo west of Kyoto — one of the most photographed spots in Japan. Adjacent Tenryu-ji has an exquisite Zen garden and pond.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">Always open (go at 07:00)</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">Free (Tenryu-ji garden ¥500)</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 7 · Tue 25 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Tip</span><span class="meta-value">Arrive at 07:00 for no crowds</span></div>
+            </div>
+            <a href="https://www.arashiyama-tenryuji.com/en/" target="_blank" class="attraction-link">Tenryu-ji official site ↗</a>
+          </div>
+        </div>
+
+        <!-- KINKAKU-JI -->
+        <div class="attraction-card" data-city="kyoto">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Kinkaku-ji_the_Golden_Pavilion_in_Kyoto_overlooking_the_garden_pond.jpg/640px-Kinkaku-ji_the_Golden_Pavilion_in_Kyoto_overlooking_the_garden_pond.jpg" alt="Kinkaku-ji" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#faf0d8">✨</div>
+          <div class="attraction-body">
+            <div class="attraction-tags"><span class="tag tag-kyoto">Kyoto</span></div>
+            <div class="attraction-name">Kinkaku-ji Golden Pavilion</div>
+            <div class="attraction-desc">The iconic gold-leaf covered Zen temple reflected in its mirror pond — one of Japan's most visited and photographed landmarks.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">09:00–17:00 daily</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">¥500 adults · ¥300 children</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 7 · Tue 25 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Tip</span><span class="meta-value">Visit ~15:00 for fewer crowds</span></div>
+            </div>
+            <a href="https://www.shokoku-ji.jp/en/kinkakuji/" target="_blank" class="attraction-link">Official site ↗</a>
+          </div>
+        </div>
+
+        <!-- MANGA MUSEUM -->
+        <div class="attraction-card" data-city="kyoto">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Kyoto_International_Manga_Museum_01.jpg/640px-Kyoto_International_Manga_Museum_01.jpg" alt="Kyoto Manga Museum" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#e8eaf8">📚</div>
+          <div class="attraction-body">
+            <div class="attraction-tags"><span class="tag tag-kyoto">Kyoto</span></div>
+            <div class="attraction-name">Kyoto Manga Museum</div>
+            <div class="attraction-desc">300,000 manga volumes in a converted primary school. Read on the grass, explore the history of manga, watch live drawing demonstrations.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">Wed–Mon 10:00–17:00</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">¥900 adult · ¥400 student</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 8 · Wed 26 Aug ✓ Open</span></div>
+              <div class="meta-item"><span class="meta-label">Closed</span><span class="meta-value">Tuesdays only</span></div>
+            </div>
+            <a href="https://kyotomm.jp/en/" target="_blank" class="attraction-link">Official site ↗</a>
+          </div>
+        </div>
+
+        <!-- USJ -->
+        <div class="attraction-card" data-city="osaka">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Universal_Studios_Japan_Globe_%282016%29.jpg/640px-Universal_Studios_Japan_Globe_%282016%29.jpg" alt="Universal Studios Japan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#f8e8e8">🎢</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-osaka">Osaka</span>
+              <span class="tag tag-prebooking">Pre-booking Required</span>
+            </div>
+            <div class="attraction-name">Universal Studios Japan</div>
+            <div class="attraction-desc">Home to the world's first Super Nintendo World, The Wizarding World of Harry Potter, Donkey Kong Country and Minion Park. USJ's 25th Anniversary in 2026.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">09:00–21:00 (Aug, varies)</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">From ¥8,600 · Express Pass recommended</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 9 · Thu 27 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Access</span><span class="meta-value">JR Yumesaki Line → Universal City</span></div>
+            </div>
+            <a href="https://www.usj.co.jp/web/en/us" target="_blank" class="attraction-link">Book tickets ↗</a>
+            <div class="prebooking-note">⚠️ Book park entry + Super Nintendo World Area Entry Ticket in advance. Express Pass 7 is recommended for peak August.</div>
+          </div>
+        </div>
+
+        <!-- DOTONBORI -->
+        <div class="attraction-card" data-city="osaka">
+          <img class="attraction-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Dotonbori_in_Osaka%2C_Japan_-_July_2017.jpg/640px-Dotonbori_in_Osaka%2C_Japan_-_July_2017.jpg" alt="Dotonbori" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          <div class="attraction-img-placeholder" style="display:none;background:#fce8e0">🌆</div>
+          <div class="attraction-body">
+            <div class="attraction-tags">
+              <span class="tag tag-osaka">Osaka</span>
+              <span class="tag tag-free">Free</span>
+            </div>
+            <div class="attraction-name">Dotonbori Canal</div>
+            <div class="attraction-desc">Osaka's famous neon-lit entertainment district along the Dotonbori canal — the epicentre of Osaka's legendary food scene and nightlife.</div>
+            <div class="attraction-meta">
+              <div class="meta-item"><span class="meta-label">Hours</span><span class="meta-value">Always open</span></div>
+              <div class="meta-item"><span class="meta-label">Price</span><span class="meta-value">Free to walk</span></div>
+              <div class="meta-item"><span class="meta-label">Day</span><span class="meta-value">Day 10 · Fri 28 Aug</span></div>
+              <div class="meta-item"><span class="meta-label">Don't miss</span><span class="meta-value">Glico Running Man sign</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- end attractions tab -->
+  </div>
+</section>
+
+<!-- TIPS -->
+<section id="tips" style="background: var(--ink);">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--gold)">Before you go</div>
+    <h2 class="section-title" style="color:var(--cream)">Essential Tips</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-emoji">🎟️</span>
+        <div class="tip-title">Pre-book these immediately</div>
+        <div class="tip-text">DisneySea, TeamLab Borderless, USJ + Super Nintendo World area entry. All sell out weeks ahead in August. Book the moment you confirm flights.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">💴</span>
+        <div class="tip-title">Money & payments</div>
+        <div class="tip-text">Get a Suica/Pasmo IC card at the airport — use it for all trains and convenience stores. Japan is still largely cash-based; bring ¥50,000 per person per week.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">🚄</span>
+        <div class="tip-title">Tokyo → Kyoto train</div>
+        <div class="tip-text">Buy individual Hikari Shinkansen tickets (¥14,720 each) rather than a JR Pass — for this itinerary the Pass doesn't pay off. Book reserved seats in advance.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">📱</span>
+        <div class="tip-title">Apps to download</div>
+        <div class="tip-text">Tokyo Disney Resort app (for Premier Access), USJ Official app (for Nintendo World entry tickets), Google Maps (works perfectly in Japan), HyperDia for trains.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">🌡️</span>
+        <div class="tip-title">August weather</div>
+        <div class="tip-text">Expect 32–36°C and high humidity. Carry a small towel, fan and sunscreen. Tokyo feels hotter due to urban heat. Temples in the morning are cooler.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-emoji">🧳</span>
+        <div class="tip-title">Luggage forwarding</div>
+        <div class="tip-text">Use Yamato Transport's "Takkyubin" service to forward luggage from Tokyo hotel to Kyoto hotel overnight (¥1,500–2,000/bag). Travel light on the Shinkansen.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Built for the <span>Japan 2026</span> family adventure · Update this file as the plan evolves
+</footer>
+
+<script>
+function switchTab(e, tabId) {
+  e.preventDefault();
+  document.querySelectorAll('.page-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+function filterAttractions(city, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.attraction-card').forEach(card => {
+    if (city === 'all' || card.dataset.city === city) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href.startsWith('#') && !this.classList.contains('page-tab') && !this.classList.contains('pill-btn')) {
+      e.preventDefault();
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Active nav highlighting
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+
+</script>
+</body>
+</html>
