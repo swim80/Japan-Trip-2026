@@ -106,6 +106,8 @@ section{padding:80px 2rem}
 .tag-cost{background:rgba(44,120,115,.1);color:var(--teal)}
 .tag-free{background:rgba(91,168,114,.12);color:#3d7a52}
 .tag-prebook{background:rgba(212,168,67,.12);color:#8a6d10}
+.tag-confirmed{background:rgba(16,185,129,.12);color:#065f46;font-weight:700}
+.tag-pending{background:rgba(239,68,68,.1);color:#b91c1c;font-weight:700}
 .activity-link{font-size:11px;color:var(--red);text-decoration:none;font-weight:500;display:inline-block;margin-top:4px}
 .activity-link:hover{text-decoration:underline}
 /* TRAVEL ROW */
@@ -186,7 +188,7 @@ footer span{color:var(--red)}
 </div>
 
 <div class="flight-strip">
-  <div class="flight-leg"><div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,240,.4);margin-bottom:2px">Outbound · EY185 + EY800</div><strong>Fri 21 Aug</strong> · ATH 14:30 → AUH 20:10 / 21:25</div><span class="flight-arrow">→</span><div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,240,.4);margin-bottom:2px">Arrive Tokyo</div><strong>Sat 22 Aug</strong> · NRT 12:45</div></div>
+  <div class="flight-leg"><div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,240,.4);margin-bottom:2px">Outbound · EY185 + EY800</div><strong>Fri 21 Aug</strong> · ATH 14:30 → AUH 20:15 / 22:10</div><span class="flight-arrow">→</span><div><div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,246,240,.4);margin-bottom:2px">Arrive Tokyo</div><strong>Sat 22 Aug</strong> · NRT 13:30</div></div>
   <div class="flight-div"></div>
   <div class="flight-leg" style="font-size:12px;color:rgba(250,246,240,.4)">Etihad · ref 7OEWY9 · via Abu Dhabi</div>
   <div class="flight-div"></div>
@@ -216,7 +218,7 @@ footer span{color:var(--red)}
           <div class="day-titles"><div class="day-date-text">Sat 22 Aug — Arrival & Asakusa</div><div class="day-theme">Land, settle, first taste of old Tokyo</div></div>
           <div class="day-load light">● Light</div>
         </div>
-        <div class="travel"><span class="travel-icon">🚌</span><span class="travel-text"><strong>Airport → hotel (Limousine Bus):</strong> Land NRT 12:45. Take the Airport Limousine Bus to TCAT (Tokyo City Air Terminal, Nihonbashi Hakozaki) — ~52 min, ~¥3,200/person (~€19). Buy ticket at the Limousine Bus counter after baggage claim. TCAT is a 5-min walk or ¥700 taxi from KOKO Hotel. No transfers, no stairs with luggage. Far easier than the N'EX for this specific hotel.</span></div>
+        <div class="travel"><span class="travel-icon">🚌</span><span class="travel-text"><strong>Airport → hotel (Limousine Bus):</strong> Land NRT 13:30 (schedule changed +45 min). Take the Airport Limousine Bus to TCAT (Tokyo City Air Terminal, Nihonbashi Hakozaki) — ~52 min, ~¥3,200/person (~€19). Buy ticket at the Limousine Bus counter after baggage claim. TCAT is a 5-min walk or ¥700 taxi from KOKO Hotel. No transfers, no stairs with luggage. Far easier than the N'EX for this specific hotel.</span></div>
         <div class="block">
           <div class="block-time"><div class="block-period">Afternoon</div><div class="block-clock">15:30–18:00</div></div>
           <div class="block-body">
@@ -267,7 +269,7 @@ footer span{color:var(--red)}
               <div class="activity-content">
                 <div class="activity-name">Jojoen Yakiniku (Solamachi)</div>
                 <div class="activity-desc">Premium grill-your-own wagyu in the Skytree complex — comfortable, family-friendly, no need to travel after a long arrival day. Daughter's pick.</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">~¥4,000–6,000pp (~€24–36)</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">~¥4,000–6,000pp (~€24–36)</span><span class="activity-tag tag-pending">⚠️ Reserve via tablecheck.com — Late July</span></div>
               </div>
             </div>
           </div>
@@ -276,8 +278,9 @@ footer span{color:var(--red)}
         <div class="alt-section" id="alt-d1">
           <div class="alt-section-header" onclick="toggleAlt('alt-d1')"><span class="alt-toggle-label">Alternatives & Options</span><span class="alt-toggle-icon">▼</span></div>
           <div class="alt-list">
-            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Akihabara this evening (if energy allows)</div><div class="alt-desc">Electric Town — anime, electronics, retro arcades. Moved to Day 2 in the main plan, but if the family is wired and not tired, it's a fun first-night option. Otherwise rest.</div></div></div>
-            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Skytree observation deck</div><div class="alt-desc">¥2,100 (~€13) for the 350m deck. Enclosed but spectacular night views. We skip it because Shibuya Sky (Day 4) is open-air and better — but do it tonight if the kids want a tower on day one.</div></div></div>
+            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Art Aquarium Museum — 5 min from KOKO Hotel</div><div class="alt-desc">Located in Nihonbashi — literally walking distance from your hotel. Goldfish swimming through giant illuminated tanks inspired by traditional Japanese aesthetics — Edo-era goldfish culture meets modern light art. ¥2,300 adults (~€14) · ¥1,200 children (~€7). Opens until 21:00. If you arrive at the hotel with energy to spare, this is a beautiful and completely effortless first-night add. Specifically recommended by a friend who visited Japan.</div></div></div>
+            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Akihabara this evening (if energy allows)</div><div class="alt-desc">Electric Town — anime, electronics, retro arcades. Moved to Day 4 in the main plan, but if the family is wired and not tired, it's a fun first-night option. Otherwise rest.</div></div></div>
+            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Skytree observation deck</div><div class="alt-desc">¥2,100 (~€13) for the 350m deck. Enclosed but spectacular night views. We skip it because Shibuya Sky (Day 3) is open-air and better — but do it tonight if the kids want a tower on day one.</div></div></div>
           </div>
         </div>
       </div>
@@ -306,7 +309,7 @@ footer span{color:var(--red)}
               <div class="activity-content">
                 <div class="activity-name">Capybara Café Moffu</div>
                 <div class="activity-desc">Right on Takeshita Street — zero detour. Sit with free-roaming capybaras for 30 min while having drinks. Adorable, completely unique experience for the kids. Book 2 weeks ahead (opens Sun 9 Aug — same day as Shibuya Sky!).</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">~¥3,000pp (~€18)</span><span class="activity-tag tag-prebook">⏰ Opens Sun 9 Aug · 18:00 Athens time</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-confirmed">🎫 Confirmed · ¥4,000pp (~€24) · Pre-paid</span><span class="activity-tag tag-prebook">11:00 AM · Bring confirmation</span></div>
                 <a href="https://www.tablecheck.com/en/capibaramoffu-takeshitastreet" target="_blank" class="activity-link">Book via TableCheck ↗</a>
               </div>
             </div>
@@ -350,10 +353,9 @@ footer span{color:var(--red)}
             <div class="activity">
               <div class="activity-img" style="background:linear-gradient(135deg,#1E3A5F,#3B82F6);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🌆</div>
               <div class="activity-content">
-                <div class="activity-name">Shibuya Sky (sunset) + Scramble Crossing</div>
-                <div class="activity-desc">Open-air rooftop 229m up — book the 16:00–18:00 slot for sunset over the city, Mt Fuji on clear days. After, walk the world-famous Scramble Crossing and dine in Shibuya (Uobei conveyor sushi or Shibuya Parco food floors).</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">¥2,500pp (~€15)</span><span class="activity-tag tag-prebook">⏰ Opens Sun 9 Aug · 18:00 Athens time</span></div>
-                <a href="https://www.shibuya-scramble-square.com/sky/en/" target="_blank" class="activity-link">Book tickets ↗</a>
+                <div class="activity-name">Shibuya Scramble Crossing + Dinner</div>
+                <div class="activity-desc">Walk the world's busiest pedestrian crossing — thousands of people crossing simultaneously from all directions. Mesmerising at street level in the evening. Dine in Shibuya: Uobei conveyor sushi (budget, fun for teens), Shibuya Parco basement food floors, or sit-down ramen. Then browse Donki before calling it a night.</div>
+                <div class="activity-meta"><span class="activity-tag tag-free">Free to watch</span><span class="activity-tag tag-cost">Dinner ~¥1,500–2,500pp (~€9–15)</span></div>
               </div>
             </div>
             <div class="activity">
@@ -381,7 +383,7 @@ footer span{color:var(--red)}
       <div class="day-card tokyo">
         <div class="day-header">
           <div class="day-badge"><span>Day</span><strong>3</strong></div>
-          <div class="day-titles"><div class="day-date-text">Mon 24 Aug — Ginza & Shinjuku</div><div class="day-theme">Stationery, elegant Ginza, neon Shinjuku night</div></div>
+          <div class="day-titles"><div class="day-date-text">Mon 24 Aug — Ginza, Akihabara & Shibuya Sky</div><div class="day-theme">Stationery, anime, Tokyo by night from 229m</div></div>
           <div class="day-load medium">● Medium</div>
         </div>
         <div class="block">
@@ -399,8 +401,8 @@ footer span{color:var(--red)}
               <div class="activity-img" style="background:linear-gradient(135deg,#9A3412,#D97706);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🛍️</div>
               <div class="activity-content">
                 <div class="activity-name">Ginza — Itoya, Loft, Onitsuka Tiger, Kitkat, Nanaya</div>
-                <div class="activity-desc">Itoya: 12 floors of world-class stationery — pens, washi, notebooks. Loft for lifestyle goods. Onitsuka Tiger concept store. Kitkat Chocolatory for exclusive Japan-only flavours (sake, wasabi, matcha). Nanaya matcha chocolates — world's strongest matcha in 7 intensity levels. Lunch: Ginza Kagari ramen (~¥1,200, queue expected but worth it — Tokyo's best chicken broth).</div>
-                <div class="activity-meta"><span class="activity-tag tag-free">Browse free</span><span class="activity-tag tag-cost">Ramen ~¥1,200 (~€7)</span></div>
+                <div class="activity-desc">Itoya: 12 floors of world-class stationery — pens, washi, notebooks. Loft for lifestyle goods. Onitsuka Tiger concept store. Kitkat Chocolatory for exclusive Japan-only flavours (sake, wasabi, matcha). Nanaya matcha chocolates — world's strongest matcha in 7 intensity levels.</div>
+                <div class="activity-meta"><span class="activity-tag tag-free">Browse free</span></div>
                 <a href="https://www.ito-ya.co.jp/en/" target="_blank" class="activity-link">Itoya ↗</a>
               </div>
             </div>
@@ -421,15 +423,43 @@ footer span{color:var(--red)}
             </div>
           </div>
         </div>
-        <div class="travel"><span class="travel-icon">🚇</span><span class="travel-text"><strong>Tsukiji → Akihabara:</strong> ~15 min by Metro (¥210 / ~€1.30). Then Akihabara → Ikebukuro → Shinjuku.</span></div>
+        <div class="travel"><span class="travel-icon">🚇</span><span class="travel-text"><strong>Tsukiji → Akihabara:</strong> ~15 min by Metro (¥210 / ~€1.30). End Akihabara by 17:30 to reach Shibuya by 18:45 for Shibuya Sky. Ikebukuro moves to Day 4.</span></div>
         <div class="block">
-          <div class="block-time"><div class="block-period">Evening + Dinner</div><div class="block-clock">18:00 on</div></div>
+          <div class="block-time"><div class="block-period">Afternoon</div><div class="block-clock">14:30–17:30</div></div>
           <div class="block-body">
             <div class="activity">
-              <div class="activity-img" style="background:linear-gradient(135deg,#1C1917,#78716C);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🍻</div>
+              <div class="activity-img" style="background:linear-gradient(135deg,#7C3AED,#EC4899);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🎮</div>
               <div class="activity-content">
-                <div class="activity-name">Shinjuku — Onitsuka Tiger Global Flagship, Godzilla Head, 3D Cat, BEAMS Japan</div>
-                <div class="activity-desc">Start Shinjuku by 19:00 to catch the <strong>Onitsuka Tiger Global Flagship</strong> before its 20:00 closing — the largest Onitsuka Tiger store in the world, opened July 2026 at 3-11-26 Shinjuku. Three floors of shoes and apparel, plus a first-ever entertainment floor with arcade games (basketball, driving simulator), giant capsule machines and photo booths run by GIDA GIGO. Then: spot the Godzilla head on Hotel Gracery Shinjuku. Catch the 3D calico cat on Cross Shinjuku Vision building at the East Exit — plays every 15 min (at :00, :15, :30, :45), free. Walk Omoide Yokocho and Golden Gai's tiny-bar alleys. BEAMS Japan for gifts.</div>
+                <div class="activity-name">Akihabara — anime, electronics, Gashapon</div>
+                <div class="activity-desc">Electric Town: Tokyo Hobby Center, Surugaya (used anime goods, 8 floors), Gashapon machines everywhere. Maid café experience (~¥1,500 for a drink + performance). Leave by 17:30 — Ikebukuro is on Day 4 so no rush to fit it today.</div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">Maid café ~¥1,500pp (~€9)</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="travel"><span class="travel-icon">🚃</span><span class="travel-text"><strong>Akihabara → Shibuya:</strong> ~30 min on JR Yamanote Line (¥200 / ~€1.20). Arrive by 18:45.</span></div>
+        <div class="block">
+          <div class="block-time"><div class="block-period">Evening</div><div class="block-clock">19:00–20:30</div></div>
+          <div class="block-body">
+            <div class="activity">
+              <div class="activity-img" style="background:linear-gradient(135deg,#1E3A5F,#60A5FA);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🌃</div>
+              <div class="activity-content">
+                <div class="activity-name">Shibuya Sky — night view (19:00–19:19 entry)</div>
+                <div class="activity-desc">Enter via dedicated elevator on the 1st floor of Scramble Square (2-24-12 Shibuya). Sunset was at 18:21 — the city is fully lit up by your entry. Tokyo's neon panorama from 229m open-air rooftop, Scramble Crossing glowing directly below. Allow 60–90 min. After, walk the Crossing at street level and browse Donki (5 min walk, open till 5am) before heading to Shinjuku.</div>
+                <div class="activity-meta"><span class="activity-tag tag-confirmed">🎫 All 3 confirmed · KLOOK-20260810-5BRC</span><span class="activity-tag tag-prebook">No bags/hats on rooftop · Use 46F lockers · Bring passports</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="travel"><span class="travel-icon">🚃</span><span class="travel-text"><strong>Shibuya → Shinjuku:</strong> 3 min on JR Yamanote Line (¥170 / ~€1). Arrive ~21:15.</span></div>
+        <div class="block">
+          <div class="block-time"><div class="block-period">Late evening</div><div class="block-clock">~21:15</div></div>
+          <div class="block-body">
+            <div class="activity">
+              <div class="activity-img" style="background:linear-gradient(135deg,#1A1A2E,#E94560);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🌃</div>
+              <div class="activity-content">
+                <div class="activity-name">Shinjuku — Godzilla Head, 3D Cat, Golden Gai</div>
+                <div class="activity-desc">Spot the Godzilla head on Hotel Gracery Shinjuku. Catch the 3D calico cat on Cross Shinjuku Vision at the East Exit — plays every 15 min (at :00, :15, :30, :45), free. Walk Omoide Yokocho and Golden Gai's tiny-bar alleys. BEAMS Japan for gifts. Note: Onitsuka Tiger Global Flagship closes at 20:00 — visit another day.</div>
                 <div class="activity-meta"><span class="activity-tag tag-free">3D cat free</span></div>
               </div>
             </div>
@@ -438,7 +468,7 @@ footer span{color:var(--red)}
               <div class="activity-content">
                 <div class="activity-name">Dinner: Ginza Happo Shinjuku — seafood & wagyu buffet</div>
                 <div class="activity-desc">6-min walk from Shinjuku Station. 150+ dishes: unlimited king crab and snow crab straight from Hokkaido, wagyu in multiple cuts (kalbi, sirloin, rump, rib cap), a live Edo-style sushi counter with bluefin tuna, fatty tuna, scallops and boiled eel made in front of you, plus oysters, sashimi, tempura and desserts. All-you-can-drink alcohol included. 120-minute time limit. Perfect for the family — no ordering decisions, everyone gets whatever they want. Standard Plan ¥13,000pp (~€79) · Premium Plan ¥18,000pp (~€109). Reservation required for August.</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">¥13,000pp standard (~€79) · ¥18,000pp premium (~€109)</span><span class="activity-tag tag-prebook">Reserve ahead · ~10 Aug</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">¥13,000pp standard (~€79) · ¥18,000pp premium (~€109)</span><span class="activity-tag tag-pending">⚠️ Reserve ~10 Aug</span></div>
               </div>
             </div>
           </div>
@@ -450,6 +480,7 @@ footer span{color:var(--red)}
             <div class="alt-item"><span class="alt-badge badge-removed">Removed</span><div><div class="alt-name">Tsukiji Outer Market — removed</div><div class="alt-desc">Fish and sushi for breakfast doesn't suit the family. Removed from core plan. If you want a market morning, Tsukiji is lively from 08:00 with grilled scallops, tamagoyaki, wagyu skewers and knife shops — just not as a breakfast stop.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-removed">Removed</span><div><div class="alt-name">Hie Shrine — removed</div><div class="alt-desc">A serene shrine with a photogenic tunnel of red torii gates near Akasaka. Lovely but not essential given the full day. Could be slotted in spontaneously if passing nearby.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Happo Shinjuku — all-you-can-eat seafood buffet (dinner)</div><div class="alt-desc">Located 6 min walk from Shinjuku Station (not Ginza — the name is misleading). ¥12,000–13,000pp (~€73–79), 150+ dishes including king crab legs on the grill, snow crab, wagyu sirloin/kalbi, unlimited sushi, 120 min time limit, all-you-can-drink. A great Day 3 dinner option — you're already in Shinjuku for the evening.</div></div></div>
+            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Udon Shin — carbonara udon, Yotsuya/Shinjuku</div><div class="alt-desc">Called "the best thing ever eaten in Japan" by a friend who visited. Signature dish: carbonara udon — thick chewy udon noodles with a rich egg yolk and Parmesan-style sauce, a Japanese-Italian fusion that shouldn't work but absolutely does. Located in Yotsuya, edge of Shinjuku — fits Day 3 area. Opens for lunch and dinner but queues are serious. Go early, put your name on the list, explore nearby, return when called. ~¥1,500–2,000pp (~€9–12). No reservation — walk-in and queue.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-consider">Consider</span><div><div class="alt-name">Sushi AKA Tokyo — omakase splurge</div><div class="alt-desc">8-seat counter, rated 5.0 on Tripadvisor, A5 wagyu sushi with sea urchin and caviar. Shinjuku Sanchome area — fits the Day 3 evening location. ¥28,000pp (~€170) standard or ¥40,000pp (~€242) with pairing. Exceptional but very expensive — for 3 people that's €510+ for one dinner. A genuine once-in-a-trip splurge if budget allows.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Nakiryu — Michelin ramen, Day 3 dinner fallback</div><div class="alt-desc">If Ginza Happo is full or you'd prefer a lighter dinner, Nakiryu is the best ramen fallback for a Monday evening. Michelin Bib Gourmand (also held 1★ for years). Signature: tantanmen (spicy sesame broth, creamy, not aggressively hot) and shoyu ramen with oyster-infused broth. Open Mondays ✓, dinner service 18:00–21:00. Only 10 counter seats — arrive by 17:30 to queue before opening. No reservation. Located in Otsuka, one stop from Ikebukuro on the JR Yamanote Line (~15 min from Shinjuku). ¥850–1,500pp (~€5–9). Order the tantanmen — it's the signature. Cash only.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-consider">Consider</span><div><div class="alt-name">Ramen Break Beats — Michelin Bib Gourmand</div><div class="alt-desc">Bib Gourmand 3 years running (2024–2026). Chef is a former DJ — the restaurant's vibe and soundtrack reflect that. ~¥1,500–2,000/bowl (~€9–12). Located Yutenji/Meguro — slight detour from Shinjuku. Reservations only via TableCheck, open Sundays 10am JST — you need to set an alarm and book 2+ weeks ahead; slots go fast. Worth it if you can land a reservation.</div></div></div>
@@ -545,7 +576,7 @@ footer span{color:var(--red)}
               <div class="activity-content">
                 <div class="activity-name">TeamLab Borderless Tokyo</div>
                 <div class="activity-desc">Immersive digital art museum at Azabudai Hills — 75+ artworks that move between rooms and respond to your presence. Open Wed ✓ (closed Tuesdays — this is why it moved here). Allow 3 hours. Pre-book a timed entry slot in advance.</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">¥3,800–4,800 adult (~€23–29) · ¥2,800 teen (~€17)</span><span class="activity-tag tag-prebook">Pre-book timed entry</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-confirmed">🎫 Confirmed · A7AKYFHC4TYT-0001</span><span class="activity-tag tag-prebook">Entry 10:00–10:30 · No re-entry</span></div>
                 <a href="https://www.teamlab.art/e/tokyo/" target="_blank" class="activity-link">Book timed entry ↗</a>
               </div>
             </div>
@@ -562,9 +593,19 @@ footer span{color:var(--red)}
                 <div class="activity-meta"><span class="activity-tag tag-cost">~¥1,500–2,000pp (~€9–12)</span></div>
               </div>
             </div>
+            <div class="activity">
+              <div class="activity-img" style="background:linear-gradient(135deg,#1E3A5F,#4ADE80);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🍵</div>
+              <div class="activity-content">
+                <div class="activity-name">teamLab en — tea house inside Azabudai Hills</div>
+                <div class="activity-desc">Directly inside the same Azabudai Hills complex as TeamLab Borderless — zero extra travel. A Japanese tea house designed by teamLab itself, blending traditional matcha ceremony with the same digital art philosophy. Order matcha and wagashi sweets while surrounded by the artwork. A perfect 20-minute decompression before heading to the Shinkansen. Specifically recommended by a friend who visited.</div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">~¥1,500pp (~€9) · No reservation</span></div>
+              </div>
+            </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="travel"><span class="travel-icon">🚄</span><span class="travel-text"><strong>Tokyo → Kyoto (Shinkansen):</strong> Hikari from Tokyo or Shinagawa Station ~14:30–15:00, ~2h40, ¥14,170/person (~€85). Book seats D/E for Mt Fuji views on the right side. Arrive Kyoto ~17:00–17:30.</span></div>
+        <div class="travel"><span class="travel-icon">🚄</span><span class="travel-text"><strong>Tokyo → Kyoto (Shinkansen):</strong> Hikari from Tokyo or Shinagawa Station ~14:30–15:00, ~2h40, ¥14,170/person (~€86). Seats D/E for Mt Fuji views. Arrive Kyoto ~17:00–17:30. <strong>⚠️ Book on smart-ex.jp from 27 Jul.</strong></span></div>
         <div class="block">
           <div class="block-time"><div class="block-period">Afternoon</div><div class="block-clock">arrive Kyoto ~17:30</div></div>
           <div class="block-body">
@@ -692,7 +733,7 @@ footer span{color:var(--red)}
               <div class="activity-content">
                 <div class="activity-name">Wagyu Yakiniku Waya — Renzou course</div>
                 <div class="activity-desc">Grill-your-own premium wagyu yakiniku — the Renzou course is the recommended option at ¥5,000pp. Book 2–3 weeks ahead via TableCheck. One of Kyoto's best wagyu experiences.</div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">¥5,000pp (~€30) · Pre-book</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">¥5,000pp (~€30)</span><span class="activity-tag tag-pending">⚠️ Reserve Aug 6–13 · tablecheck.com</span></div>
                 <a href="https://www.tablecheck.com" target="_blank" class="activity-link">Book via TableCheck ↗</a>
               </div>
             </div>
@@ -731,6 +772,7 @@ footer span{color:var(--red)}
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Ichikawaya Coffee — Day 6 breakfast before Sanjusangendo</div><div class="alt-desc">A 200-year-old machiya (traditional townhouse) converted into a café, just 5 min walk from Sanjusangendo and the DoubleTree. Opens at 8:00 — perfect for breakfast before Sanjusangendo opens at 8:30. Signature: seasonal fruit sandwich, in late August likely peach or melon, with perfectly whipped cream on soft white bread. ¥1,320 sandwich + ¥600 coffee (~€12 total). Arrive at exactly 8:00 — by 9:00 there's a queue out the door. Closed Tuesdays — Thursday Day 6 is open ✓. No reservation, walk-in only. Address: 396-2 Kaneichō, Higashiyama Ward.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Mochi Mochi Kyoto — live mochi pounding, Higashiyama</div><div class="alt-desc">Kyoto's equivalent of Nakatanidou in Nara — live mochi pounding demonstration in Higashiyama, within the Day 6 walking area near Kiyomizu-dera. Vegan, gluten-free, chocolate or matcha flavoured mochi topped with a fresh strawberry. ¥1,000/piece. Queue required, no reservation. A quick 10-min stop on the Ninen-zaka/Kiyomizu walk — a great snack between temples.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Cafe 33 — ice bowl coffee break (Hyatt Regency)</div><div class="alt-desc">Directly next to Sanjusangendo (5 min walk), inside the Hyatt Regency Kyoto lobby. Signature: cold brew served in a giant hand-carved ice bowl — only 10 per day, book ahead. Also matcha lattes. Opens 11:30. Drinks alone ~¥3,300 each (~€20) — premium hotel pricing but a uniquely Japan moment. Slot in as a quick luxury break between Sanjusangendo and Kiyomizu-dera.</div></div></div>
+            <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Ganko Takasegawa Nijo-en — geiko dinner with dance performance ⭐ Strong consider</div><div class="alt-desc">One of the most authentic cultural dining experiences in all of Kyoto. A traditional riverside kaiseki restaurant along the scenic Takase River canal, where you dine while watching a live geiko (geisha) and maiko dance performance. Specifically recommended by a friend who said she "saw the geiko dance and custom" there. Located near Nijo/Sanjo, close to the Pontocho and Gion area — fits perfectly in the Day 6 evening geography.<br><br>¥8,000–15,000pp (~€48–91) depending on course. Includes traditional Japanese multi-course kaiseki meal + cultural performance in a gorgeous old machiya setting. Far richer and more immersive than just walking through Gion hoping to glimpse a maiko on the street.<br><br>⚠️ <strong>Advance reservation essential</strong> — book at least 2 weeks ahead via their official website or Tablecheck. This is a premium experience that requires commitment. Popular in August.<br><br>🔄 <strong>What changes:</strong> This replaces Wagyu Waya as the Day 6 dinner. You get cultural performance + kaiseki instead of grill-your-own wagyu. If you still want wagyu, it can shift to an Osaka day. Both are excellent — this one is more uniquely Kyoto.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-consider">Consider</span><div><div class="alt-name">Bee's Knees — adults-only cocktail bar (Pontocho)</div><div class="alt-desc">One of Asia's 50 Best Bars. Arrive 17:40 for the 18:00 opening to skip the queue. Located in Pontocho, across the Kamo River from Gion — not walking distance from the hotel. With only 2 Kyoto nights and the kids in tow, this works only if the family spontaneously ends up in Pontocho for dinner and you decide on the spot. Not in the core plan.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Kinkaku-ji Golden Pavilion</div><div class="alt-desc">Iconic gold temple (¥500 / ~€3) — beautiful but a bus ride out and very crowded. We prioritise Kiyomizu-dera which is more dramatic and central. Swap in if the kids specifically want the golden one.</div></div></div>
             <div class="alt-item"><span class="alt-badge badge-good">Good</span><div><div class="alt-name">Kyoto Manga Museum</div><div class="alt-desc">300,000-volume manga library in an old school building. ¥900 (~€5.50), closed Tuesdays. Great for teens — slot into the morning if you'd rather manga than temples.</div></div></div>
@@ -770,6 +812,26 @@ footer span{color:var(--red)}
                 <div class="activity-name">Arashiyama lunch + last Kyoto stroll</div>
                 <div class="activity-desc">Riverside lunch or street snacks in Arashiyama before heading back to Kyoto Station. Luggage is already on its way to Osaka — travel light and enjoy the last moments of Kyoto.</div>
                 <div class="activity-meta"><span class="activity-tag tag-cost">~¥1,500pp (~€9)</span></div>
+              </div>
+            </div>
+            <div class="activity">
+              <div class="activity-img" style="background:linear-gradient(135deg,#BE185D,#F9A8D4);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🧀</div>
+              <div class="activity-content">
+                <div class="activity-name">Kyo Karucha Cafe — anime cheesecakes</div>
+                <div class="activity-desc">On the way from Arashiyama to Kyoto Station — stop at Karasuma Oike area for Kyo Karucha's famous "Happiness Cheesecakes". Adorable cartoon-cheese-shaped individual cheesecakes with a mouse character on top, inspired by anime holey cheese. Flavours: cheese, matcha, strawberry, seasonal. The pink two-storey Showa-era townhouse is as cute as the cakes. Sit upstairs for courtyard views. ¥570/cheesecake (~€3.50). Walk-in only, no reservation. 3 min from Karasuma Oike Station.</div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">¥570/cake (~€3.50) · ~¥1,500pp total</span><span class="activity-tag tag-free">No booking needed</span></div>
+              </div>
+            </div>
+            <div class="activity">
+              <div class="activity-img" style="background:linear-gradient(135deg,#BE185D,#FCA5A5);display:flex;align-items:center;justify-content:center;font-size:36px;flex-shrink:0;">🍓</div>
+              <div class="activity-content">
+                <div class="activity-name">Nishiki Market + Shijo-dori — strawberry mochi</div>
+                <div class="activity-desc">A 5-min walk from Kyo Karucha. Nishiki Market is a 400-year-old covered food alley — "Kyoto's Kitchen" — lined with 100+ stalls selling pickled vegetables, fresh tofu, tamagoyaki, wagashi, sake and unique street snacks. The must-buy: fresh strawberry mochi, red bean paste wrapped around a whole strawberry in a soft mochi shell. Warm, fresh and unlike anything you'll find elsewhere. Walk the full alley (about 400m), exit onto Shijo-dori and you're 5 min from the Gion/Yasaka area. Most stalls open from ~10:00–18:00.</div>
+                <div class="activity-meta"><span class="activity-tag tag-cost">Strawberry mochi ~¥300–500 (~€2–3) · Graze free</span></div>
+              </div>
+            </div>
+              </div>
+            </div>
               </div>
             </div>
           </div>
@@ -844,7 +906,7 @@ footer span{color:var(--red)}
                   <div>13:00–13:30 · Villain-Con Minion Blast</div>
                   <div style="margin-top:6px;color:#DC2626;font-weight:600">⚠️ Harry Potter & Flying Dinosaur — open USJ app the moment you enter the gates and grab these slots immediately. They sell out within minutes of park opening.</div>
                 </div>
-                <div class="activity-meta"><span class="activity-tag tag-cost">¥8,900pp studio (~€54) + ¥16,800pp EP5 (~€102) · ✅ Confirmed</span></div>
+                <div class="activity-meta"><span class="activity-tag tag-confirmed">🎫 Confirmed · Order P2600587604</span><span class="activity-tag tag-prebook">Nintendo World 11:00 · Mario Kart 11:00 · Mine Cart 11:30 · Villain-Con 13:00</span></div>
               </div>
             </div>
           </div>
@@ -1077,13 +1139,13 @@ footer span{color:var(--red)}
       <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid var(--red)">
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:.5rem">Outbound</div>
         <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:800;margin-bottom:.5rem">Athens → Tokyo Narita</div>
-        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.6">📅 Fri 21 Aug · EY185 + EY800<br>🛫 ATH 14:30 → AUH 20:10 / 21:25 → NRT 12:45 (+1)<br>🔖 Ref: 7OEWY9 · Etihad Airways<br>👥 1 adult + 2 children</div>
+        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.6">📅 Fri 21 Aug · EY185 + EY800<br>🛫 ATH 14:30 → AUH 20:15 / 22:10 → NRT 13:30 (+1)<br>⚠️ <em>Schedule updated 10 Aug — arrival +45 min</em><br>🔖 Ref: 7OEWY9 · Etihad Airways<br><br>🎫 GIANNATOS/GEORGIOS · 607-5467438372-73<br>🎫 VASILIKI/GIANNATOU · 607-5467438374-75<br>🎫 GEORGIOS MAXIMOS/GIANNATOS · 607-5467438370-71</div>
       </div>
 
       <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid var(--red)">
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:.5rem">Return</div>
         <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:800;margin-bottom:.5rem">Osaka Kansai → Athens</div>
-        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.6">📅 Mon 31 Aug · EY815 + EY187<br>🛫 KIX 19:25 → AUH 00:40 / 02:10 → ATH 06:15 (+1)<br>🔖 Ref: 7OEWY9 · Etihad Airways<br>👥 1 adult + 2 children</div>
+        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.6">📅 Mon 31 Aug · EY815 + EY187<br>🛫 KIX 19:25 → AUH 00:40 / 02:10 → ATH 06:15 (+1)<br>🔖 Ref: 7OEWY9 · Etihad Airways<br><br>🎫 GIANNATOS/GEORGIOS · 607-5467438372-73<br>🎫 VASILIKI/GIANNATOU · 607-5467438374-75<br>🎫 GEORGIOS MAXIMOS/GIANNATOS · 607-5467438370-71</div>
       </div>
 
     </div>
@@ -1094,10 +1156,42 @@ footer span{color:var(--red)}
     <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(26,26,46,.4);margin-bottom:1rem">🎟️ Tickets</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem">
 
+      <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid #10B981">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#10B981;margin-bottom:.5rem">Day 2 · Sun 23 Aug · Tokyo</div>
+        <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:800;margin-bottom:.5rem">Capybara Cafe Moffu Harajuku</div>
+        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.8">
+          📍 Om169 Building 1F, 1-6-9 Jingumae, Shibuya (2 min from Takeshita Street)<br>
+          🕙 11:00 AM · 30 min session + all-you-can-drink<br>
+          👥 3 people · Pre-paid ✅<br>
+          💴 ¥12,000 total (¥4,000pp / ~€24)<br>
+          📋 Status: Accepted · via TableCheck<br><br>
+          💡 Show confirmation on arrival immediately — protects your full 30 min. Same building also has a Samoyed Café if you want more animal time after.
+        </div>
+      </div>
+
       <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid #3B82F6">
         <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#3B82F6;margin-bottom:.5rem">Day 5 · Wed 26 Aug · Tokyo</div>
         <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:800;margin-bottom:.5rem">teamLab Borderless</div>
         <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.6">📍 Azabudai Hills, Kamiyacho<br>🕙 Entry 10:00–10:30 · No time limit after entry<br>👥 1 Adult + 2 Student Summer Pass (Middle & High School)<br>💴 ¥8,600 total (~€52) · No re-entry<br>🔖 <strong>A7AKYFHC4TYT-0001</strong></div>
+      </div>
+
+      <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid #8B5CF6">
+        <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#8B5CF6;margin-bottom:.5rem">Day 3 · Mon 24 Aug · Tokyo</div>
+        <div style="font-family:'Shippori Mincho',serif;font-size:16px;font-weight:800;margin-bottom:.5rem">Shibuya Sky</div>
+        <div style="font-size:12px;color:rgba(26,26,46,.6);line-height:1.8">
+          📍 Shibuya Scramble Square, 2-24-12 Shibuya (dedicated elevator 1F → 14F entrance)<br>
+          🕙 Entry 19:00–19:19 · No time limit after admission<br>
+          🔖 <strong>KLOOK-20260810-5BRC</strong> · via Klook · All 3 tickets confirmed ✅<br><br>
+          👤 Ticket 1: Georgios Giannatos · #0360-0011<br>
+          👤 Ticket 2: Vasiliki Giannatou · #0360-0028<br>
+          👤 Ticket 3: Georgios Maximos Giannatos · #0360-0035<br><br>
+          <strong>⚠️ Practical notes from ticket terms:</strong><br>
+          🎒 No bags or rucksacks on the rooftop — store in lockers on 46F before going up<br>
+          🧢 No hats or scarves on the rooftop<br>
+          📷 No selfie sticks or tripods — phones only (must fit in pocket)<br>
+          🛂 Bring passports — identity verification may be required<br>
+          🌧️ Rooftop may close without notice in bad weather
+        </div>
       </div>
 
       <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;padding:1.25rem;border-left:3px solid var(--osaka)">
@@ -1124,31 +1218,34 @@ footer span{color:var(--red)}
 
   <!-- STILL TO BOOK -->
   <div>
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(26,26,46,.4);margin-bottom:1rem">⏳ Still to Book</div>
+    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:rgba(26,26,46,.4);margin-bottom:1rem">⏳ Still to Book / Action</div>
     <div style="background:white;border:1px solid rgba(26,26,46,.06);border-radius:8px;overflow:hidden">
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(26,26,46,.4);padding:10px 1.25rem;background:rgba(26,26,46,.02);border-bottom:1px solid rgba(26,26,46,.06)">
-        <span>What</span><span>Day / Date</span><span>Where to book</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(26,26,46,.4);padding:10px 1.25rem;background:rgba(26,26,46,.02);border-bottom:1px solid rgba(26,26,46,.06)">
+        <span>What</span><span>Day / Date</span><span>When to act</span><span>Where</span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Capybara Café Moffu</span><span style="color:rgba(26,26,46,.6)">Day 2 · Sun 23 Aug</span><span><a href="https://www.tablecheck.com/en/capibaramoffu-takeshitastreet" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a> — opens Sun 9 Aug</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFF5F5">
+        <span style="font-weight:700;color:#DC2626">🔴 Register Smart-EX</span><span style="color:rgba(26,26,46,.6)">Before 27 Jul</span><span style="color:#DC2626;font-weight:600">NOW</span><span><a href="https://smart-ex.jp" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">smart-ex.jp ↗</a></span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Shibuya Sky (sunset slot)</span><span style="color:rgba(26,26,46,.6)">Day 2 · Sun 23 Aug</span><span><a href="https://www.shibuya-scramble-square.com/sky/en/" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">shibuya-scramble-square.com ↗</a> — opens Sun 9 Aug · 18:00 Athens time</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFF5F5">
+        <span style="font-weight:700;color:#DC2626">🔴 Register Visit Japan Web</span><span style="color:rgba(26,26,46,.6)">Before departure</span><span style="color:#DC2626;font-weight:600">NOW</span><span><a href="https://vjw-lp.digital.go.jp" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">vjw-lp.digital.go.jp ↗</a></span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Rokkasen (wagyu dinner)</span><span style="color:rgba(26,26,46,.6)">Day 1 · Sat 22 Aug</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFF5F5">
+        <span style="font-weight:700;color:#DC2626">🔴 Rokkasen wagyu dinner</span><span style="color:rgba(26,26,46,.6)">Day 1 · Sat 22 Aug</span><span style="color:#DC2626;font-weight:600">Late July</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Ginza Happo Shinjuku (seafood buffet dinner)</span><span style="color:rgba(26,26,46,.6)">Day 3 · Mon 24 Aug</span><span>Reserve via official site or Klook · ~10 Aug</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFFBEB">
+        <span style="font-weight:700;color:#D97706">🟠 Shinkansen Tokyo → Kyoto</span><span style="color:rgba(26,26,46,.6)">Day 5 · Wed 26 Aug</span><span style="color:#D97706;font-weight:600">27 Jul</span><span><a href="https://smart-ex.jp" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">smart-ex.jp ↗</a></span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Wagyu Yakiniku Waya (Renzou course)</span><span style="color:rgba(26,26,46,.6)">Day 6 · Thu 27 Aug</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFFBEB">
+        <span style="font-weight:700;color:#D97706">🟠 Wagyu Yakiniku Waya</span><span style="color:rgba(26,26,46,.6)">Day 6 · Thu 27 Aug</span><span style="color:#D97706;font-weight:600">6–13 Aug</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
-        <span style="font-weight:600">Rokujuan (flower mochi)</span><span style="color:rgba(26,26,46,.6)">Day 7 · Fri 28 Aug</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a> · 1–2 weeks ahead</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center;background:#FFFBEB">
+        <span style="font-weight:700;color:#D97706">🟠 Ginza Happo Shinjuku</span><span style="color:rgba(26,26,46,.6)">Day 3 · Mon 24 Aug</span><span style="color:#D97706;font-weight:600">~10 Aug</span><span>Official site or Klook</span>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;font-size:12px;padding:10px 1.25rem;align-items:center">
-        <span style="font-weight:600">Shinkansen Tokyo → Kyoto</span><span style="color:rgba(26,26,46,.6)">Day 5 · Wed 26 Aug</span><span><a href="https://smart-ex.jp/en.index.php" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">smart-ex.jp ↗</a> · opens Sun 27 Jul</span>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;border-bottom:1px solid rgba(26,26,46,.05);align-items:center">
+        <span style="font-weight:600">🟡 Rokujuan (flower mochi)</span><span style="color:rgba(26,26,46,.6)">Day 7 · Fri 28 Aug</span><span style="color:rgba(26,26,46,.5)">14–15 Aug</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
+      </div>
+      <div style="display:grid;grid-template-columns:2fr 1.5fr 1fr 1.5fr;font-size:12px;padding:10px 1.25rem;align-items:center">
+        <span style="font-weight:600">🟡 Ramen Break Beats (if pursuing)</span><span style="color:rgba(26,26,46,.6)">Day 4 · Tue 25 Aug</span><span style="color:rgba(26,26,46,.5)">18 Aug 18:00</span><span><a href="https://tablecheck.com" target="_blank" style="color:var(--red);font-weight:500;text-decoration:none">tablecheck.com ↗</a></span>
       </div>
     </div>
   </div>
